@@ -1,0 +1,107 @@
+var a = [];
+for(var i = 0; i<document.querySelector("tbody").childNodes.length;i++){
+    a[i] = [];
+    for(var j=0;j<18;j++){
+        a[i][j] = "Undefined";
+    }
+    try {
+   a[i][18] = document.querySelector("tbody").childNodes[i].getElementsByClassName("td-action")[0].getElementsByClassName("item-action grid col-w-3")[0].getElementsByClassName("goods-price-current")[0].getElementsByClassName("goods-price font-s")[0].getElementsByClassName("goods-price-current")[0].getElementsByClassName("goods-price-value")[0].childNodes[0].innerHTML + document.querySelector("tbody").childNodes[5].getElementsByClassName("td-action")[0].getElementsByClassName("item-action grid col-w-3")[0].getElementsByClassName("goods-price-current")[0].getElementsByClassName("goods-price font-s")[0].getElementsByClassName("goods-price-current")[0].getElementsByClassName("goods-price-value")[0].childNodes[1].innerHTML;
+} catch (error) {
+  let gx = 0;
+} finally {
+  let gx = 0;
+}
+   
+    for(var j=0;j<document.querySelector("tbody").childNodes[i].childNodes.length;j++){
+        let query = document.querySelector('tbody')
+        let mainNode = query.childNodes[i]
+        let innerNode = mainNode.childNodes[j]
+        if(innerNode.childNodes.length == 2){
+
+switch(innerNode.childNodes[0].innerHTML) {
+    
+    case "Screen Size":
+        a[i][0]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "CPU type":
+        a[i][1]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Memory":
+        a[i][2]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Storage":
+        a[i][3]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "GPU":
+        a[i][4]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Resolution":
+        a[i][5]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Weight":
+        a[i][6]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Backlit Keyboard":
+        a[i][7]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "CPU Speed":
+        a[i][8]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Number of Cores":
+        a[i][9]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Color":
+        a[i][10]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Webcam":
+        a[i][11]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Touchscreen":
+        a[i][12]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Graphic Type":
+        a[i][13]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Operating System":
+        a[i][14]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Thunderbolt":
+        a[i][15]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Display Type":
+        a[i][16]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+    case "Card Reader":
+        a[i][17]=innerNode.childNodes[1].innerHTML;
+        break;
+        
+
+    default:
+        break;
+        
+        
+}
+            
+        }else{
+            console.log(`Obj: ${innerNode}`)
+        }
+    }
+}
+console.log(a);
