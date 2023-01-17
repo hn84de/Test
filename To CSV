@@ -1,0 +1,32 @@
+// Helper function to convert a 2D array to CSV format
+function arrayToCSV(a) {
+    var csv = "";
+
+    // Get the number of rows and columns in the data
+    var rowCount = a.length;
+    var colCount = a[0].length;
+
+    // Iterate over each row
+    for (var i = 0; i < rowCount; i++) {
+        var row = a[i];
+
+        // Iterate over each column in the row
+        for (var j = 0; j < colCount; j++) {
+            // Add the value to the CSV string
+            csv += row[j];
+
+            // Add a comma after the value, unless it is the last value in the row
+            if (j < colCount - 1) {
+                csv += ",";
+            }
+        }
+
+        // Add a newline after the row, unless it is the last row
+        if (i < rowCount - 1) {
+            csv += "\n";
+        }
+    }
+
+    return csv;
+}
+var csv = arrayToCSV(a);
