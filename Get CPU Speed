@@ -1,0 +1,6 @@
+function getCPUSpeed(strt){
+    let iop = strt.length;
+    let uio = strt.substring(iop-8,iop-4);
+    return uio;
+}
+//fix
