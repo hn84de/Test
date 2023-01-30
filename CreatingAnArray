@@ -1,0 +1,16 @@
+var arrayOfItems = [];
+for(let i = 0; i<30; i++){
+    arrayOfItems[i] = [];
+    for(let j = 0; j<30; j++){
+        arrayOfItems[i][j] = [];
+        for(let k = 0; k<30; k++){
+
+try{
+    arrayOfItems[i][j][k] = localStorage.getItem("b[" + i + "][" + j + "][" + k + "]");
+}catch(error){
+    let meaninglessVariable = 0;
+}
+            
+        }
+    }
+}
