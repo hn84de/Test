@@ -27,6 +27,6 @@ function extractCores(str) {
     case "16-core (8P+8E) Processor":
       return 16;
     default:
-      return "undefined";
+      return "Undefined";
   }
 }
