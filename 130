@@ -1,0 +1,28 @@
+var arrayOfItems = [];
+for(let i = 1; i<30; i++){
+    if (localStorage.getItem("b[" + i + "][" + "2" + "][" + "2]") === null) {
+  i += 30;
+}else{
+    arrayOfItems[i] = [];
+}
+    
+    for(let j = 0; j<30; j++){
+
+if (localStorage.getItem("b[" + i + "][" + j + "][" + "2]") === null) {
+  j += 30;
+}else{
+    arrayOfItems[i][j] = [];
+}
+        
+        
+        for(let k = 0; k<30; k++){
+  
+if (localStorage.getItem("b[" + i + "][" + j + "][" + k + "]") === null) {
+  k += 30;
+}else{
+    arrayOfItems[i][j][k] = localStorage.getItem("b[" + i + "][" + j + "][" + k + "]");
+}
+  
+        }
+    }
+}
