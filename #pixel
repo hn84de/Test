@@ -1,0 +1,8 @@
+function getPixelCount(resolution) {
+  const dimensions = resolution.split(" x ");
+  if (dimensions.length !== 2) return undefined;
+  const width = parseInt(dimensions[0]);
+  const height = parseInt(dimensions[1]);
+  if (isNaN(width) || isNaN(height)) return undefined;
+  return width * height;
+}
