@@ -1,0 +1,32 @@
+function extractCores(str) {
+  switch(str) {
+    case "Single-core Processor":
+      return 1;
+    case "Dual-core Processor":
+      return 2;
+    case "Quad-core Processor":
+      return 4;
+    case "6-core Processor":
+      return 6;
+    case "6-core (2P+4E) Processor":
+      return 6;
+    case "8-core Processor":
+      return 8;
+    case "8-core (4P+4E) Processor":
+      return 8;
+    case "10-core Processor":
+      return 10;
+    case "10-core (2P+8E) Processor":
+      return 10;
+    case "10-core (6P+4E) Processor":
+      return 10;
+    case "12-core (4P+8E) Processor":
+      return 12;
+    case "14-core (6P+8E) Processor":
+      return 14;
+    case "16-core (8P+8E) Processor":
+      return 16;
+    default:
+      return "undefined";
+  }
+}
