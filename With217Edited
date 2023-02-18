@@ -1,0 +1,57 @@
+var arrayOfItems = [];
+for(let i = 1; i<30; i++){
+    if (localStorage.getItem("b[" + i + "][" + "2" + "][" + "2]") === null) {
+  i += 30;
+}else{
+    arrayOfItems[i] = [];
+}
+    
+    for(let j = 0; j<30; j++){
+
+if (localStorage.getItem("b[" + i + "][" + j + "][" + "2]") === null) {
+  j += 30;
+}else{
+    arrayOfItems[i][j] = [];
+}
+        
+        
+        for(let k = 0; k<30; k++){
+  
+if (localStorage.getItem("b[" + i + "][" + j + "][" + k + "]") === null) {
+  k += 30;
+}else{
+    arrayOfItems[i][j][k] = localStorage.getItem("b[" + i + "][" + j + "][" + k + "]");
+}
+  
+        }
+    }
+}
+var s = [];
+for(let i = 0; i< 200; i++){
+    for(let j = 0; j< 30; j++){
+        try{
+            if (arrayOfItems[i][j] === undefined) {
+let yu = 0;
+} else {
+  let y = s.length;
+s[y] = arrayOfItems[i][j+1];
+}
+            
+        }catch(error){
+            let lp = 0;
+        }
+    }
+}
+var p = [];
+    for(let j = 0; j< 300; j++){
+        try{
+            if (s[j] === undefined) {
+let yu = 0;
+} else {
+p[p.length] = s[j];
+}
+            
+        }catch(error){
+            let lp = 0;
+        }
+    }
