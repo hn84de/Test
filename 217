@@ -162,5 +162,5 @@ n[y] = arrayOfItems[i][j];
 }
 setTimeout(() => {
     // code to be executed after 2 seconds
-    window.location.href = "https://www.newegg.com/tools/laptop-finder?page=" + (aq+1);
+    window.location.href = "https://www.newegg.com/tools/laptop-finder?Tpk=laptop+finder&N=4841%208000%204131&page=" + (aq+1);
 }, 100);
